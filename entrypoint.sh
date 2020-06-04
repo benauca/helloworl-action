@@ -1,2 +1,7 @@
-#!/bin/bash
-echo "Run Docker action FROM docker.pkg.github.com/benauca/hello-world-docker/hello-world:develop"
+#!/bin/sh -l
+
+echo "Hello $1"
+time=$(date)
+echo "::set-output name=time::$time"
+
+mvn --version
